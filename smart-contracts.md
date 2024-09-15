@@ -6,17 +6,31 @@ Release: Version 2.2
 1. [Document](#document)
 2. [Background to the Smart Contracts Audit and Analysis](#part-1-background-to-the-smart-contracts-audit-and-analysis)
    - [Overview](#overview)
-   - [Executive Summary](#executive-summary)
+      - [Executive Summary](#executive-summary)
    - [The Value of Smart Contracts Audit](#the-value-of-smart-contracts-audit)
-   - [How Does the Audit Help?](#how-does-the-audit-help)
+      - [Audited smart contracts: why does it matter?](#audited-smart-contracts-why-does-it-matter)
+      - [How Does the Audit Help?](#how-does-the-audit-help)
 3. [Smart Contracts Audit and Analysis Phases](#part-2-smart-contracts-audit-and-analysis-phases)
    - [Preparations for Smart Contracts Audit and Analysis](#preparations-for-smart-contracts-audit-and-analysis)
+      - [Why are preparations so important?](why-are-preparations-so-important)
+      - [Functional requirements](#functional-requirements)
+      - [Technical description](#technical-description)
+      - [Setup development environment of the project](#setup-development-environment-of-the-project)
+      - [Unit tests](#unit-tests)
+      - [Code style and best practices](#code-style-and-best-practices)
    - [Code Review and Analysis](#code-review-and-analysis)
+      - [Pre-audit](#pre-audit)
+      - [Overall review](#overall-review)
+      - [Scan by automated tools](#scan-by-automated-tools)
+      - [Fuzz Testing](#fuzz-testing)
+      - [Funds and data flow diagrams](#funds-and-data-flow-diagrams)
+      - [Line-to-line review](#line-to-line-review)
+      - [Checked Items](#checked-items)
    - [Testing](#testing)
    - [Report](#report)
    - [Remediation Check](#remediation-check)
    - [Issue Status](#issue-status)
-   - [Vulnerabilities Severity Formula](#vulnerabilities-severity-formula)
+4. [Vulnerabilities Severity Formula](#vulnerabilities-severity-formula)
 
 ---
 
@@ -155,6 +169,36 @@ Automated tools are used to search for simple issues and provide more informatio
 - Cargo-crev - cryptographically verifiable code review for cargo.
 - And other proprietary tools.
 
+### Fuzz Testing
+During the testing stage of a smart contract audit, at least one auditor will focus on performing fuzz testing to ensure that even the most obscure edge cases are covered. Fuzz testing, or fuzzing, is especially valuable for complex projects where traditional testing methods may not uncover all potential vulnerabilities. 
+
+#### Why Fuzzing is Needed:
+Fuzzing is crucial for conducting thorough audits because it helps uncover unexpected behaviors and vulnerabilities that might not be detected through manual code review or standard test cases. Smart contracts, once deployed, are immutable, making it vital to identify and mitigate security flaws beforehand. By inputting random or semi-random data into the contract's functions, fuzz testing simulates a wide range of scenarios, including edge cases that might otherwise be overlooked. This helps ensure that the contract behaves as expected under all possible conditions, ultimately enhancing the overall security and reliability of the smart contract.
+
+#### Benefits of Fuzzing:
+
+1. **Comprehensive Coverage:** Fuzzing generates a broad spectrum of inputs, including those that may not be anticipated by developers, ensuring that a wider range of potential scenarios is tested.
+  
+2. **Discovery of Edge Cases:** It excels at identifying edge cases that can lead to unexpected behaviors, such as overflows, underflows, or unexpected state changes, which are critical in the context of smart contracts.
+  
+3. **Automation:** Fuzz testing is automated, allowing it to run continuously or iteratively, providing ongoing insights into the contract’s robustness without manual intervention.
+
+#### Types of Fuzzing:
+
+1. **Stateless Fuzzing:** Stateless fuzzing involves testing a smart contract by randomly generating inputs or transactions without considering the state of the contract or previous interactions. In this approach, each input or transaction is treated independently, and the focus is on exploring the contract's behavior under various conditions without any prior knowledge of its state. Stateless fuzzing is useful for quickly identifying vulnerabilities or edge cases that could lead to unexpected outcomes. However, it may overlook issues related to the contract's state dependencies or interactions between different transactions.
+
+2. **Stateful Fuzzing:** Stateful fuzzing, on the other hand, takes into account the current state of the smart contract and its interactions with previous transactions. Instead of treating each input in isolation, stateful fuzzing aims to simulate realistic usage patterns by maintaining a model of the contract's state and executing transactions based on this model. This approach allows for more thorough testing of smart contracts, as it can uncover vulnerabilities related to state transitions, reentrancy, or unexpected interactions between different parts of the contract. Stateful fuzzing typically requires more computational resources and complexity compared to stateless fuzzing but can provide deeper insights into the contract's behavior and security properties.
+
+#### Stages of a Fuzz Test:
+
+1. **Tool Selection:** The first step is to select the appropriate fuzzing tool based on the project's protocol and programming language. For instance, [Echidna](https://github.com/crytic/echidna) is often used for Solidity-based smart contracts, while [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz) is suitable for projects written in Rust.
+
+2. **Identifying Invariants:** Next, identify the invariants of the smart contract. In the context of smart contracts, an invariant is a condition or property that should always hold true, regardless of the contract’s state or the inputs it receives. Common invariants include conditions like “the total supply of tokens should not exceed a predefined limit” or “a contract’s balance should always be non-negative.”
+
+3. **Execute Fuzz Tests:** Perform multiple fuzzing runs to test all identified invariants, ensuring that the contract maintains its integrity across a wide range of scenarios. Each run helps to verify that the contract behaves as expected, even when subjected to unforeseen or malicious inputs.
+
+By incorporating fuzz testing as a standard practice in smart contract audits, auditors can significantly enhance the security and robustness of the contracts, providing greater assurance that they will perform as intended in the real world.
+
 ### Funds and data flow diagrams
 At this step, auditors have more information about the code and can now build funds and data flow diagrams. We visualize all possible states of the contract and all its interactions with other contracts. All changes of data and funds flow should be displayed on those diagrams. 
 
@@ -174,17 +218,17 @@ EVM (Solidity, Vyper, Yul): [Checked Items (EVM)](https://docs.google.com/docume
 
 Rust-based smart contract for Solala, Near, CosmWasm, and other platforms: [Checked Items (RUST)](https://docs.google.com/document/d/1uRSC_SaMHRqII4nX6m9yVONSp1YHUvOxTi-iaX9xWFo/)
 
-### Testing
+### Analysis of received data
+All auditors review their findings and audit artifacts, and share results internally. Auditors prepare materials for the report. An expert auditor reviews all materials prepared by the lead auditor and performs a quality review of the report. Most possible issues are already documented at this step.
+
+## Testing
 During the testing phase of the audit, if unit tests are configured for the project, auditors check coverage and write their own test cases if required. Ideally, code coverage should cover all positive and negative cases. Some issues can be reproduced with invalid config of dependency contracts. Auditors create such configs and run corresponding tests. 
 
 If unit tests are not configured, auditors deploy smart contracts on the local network and check all required cases. 
 
 Some sophisticated issues require complex exploiting contracts. Usually, if it is unclear how the issue can be exploited, auditors provide the sample attacking contracts. 
 
-### Analysis of received data
-All auditors review their findings and audit artifacts, and share results internally. Auditors prepare materials for the report. An expert auditor reviews all materials prepared by the lead auditor and performs a quality review of the report. Most possible issues are already documented at this step.
-
-### Report
+## Report
 After all code review, analysis, and tests, auditors prepare a report. Reports have the following structure:
 - Introduction	
 - Scope	
@@ -208,7 +252,7 @@ Fixes must be submitted in a structured list, detailing the Finding ID and the c
 
 After all fixes are validated, a final report is provided to the customer.
 
-## Issue status
+## Issue Status
 During the auditing, an issue can have one of the following statuses:
 - **Pending Fix:** An issue newly discovered by the auditing team, not fixed yet.
 - **Resolved:** An issue that has been resolved based on the auditor's recommendations. 
