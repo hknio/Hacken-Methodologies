@@ -3,17 +3,17 @@ Release: Version 2.2
 
 ## Table of Contents
 
-1. [Document](#Document)
-2. [Background to the Smart Contracts Audit and Analysis](#background-to-the-smart-contracts-audit-and-analysis)
+1. [Document](#document)
+2. [Background to the Smart Contracts Audit and Analysis](#part-1-background-to-the-smart-contracts-audit-and-analysis)
    - [Overview](#overview)
    - [Executive Summary](#executive-summary)
    - [The Value of Smart Contracts Audit](#the-value-of-smart-contracts-audit)
    - [How Does the Audit Help?](#how-does-the-audit-help)
-3. [Smart Contracts Audit and Analysis Phases](#smart-contracts-audit-and-analysis-phases)
-   - [Preparation](#preparation)
+3. [Smart Contracts Audit and Analysis Phases](#part-2-smart-contracts-audit-and-analysis-phases)
+   - [Preparations for Smart Contracts Audit and Analysis](#preparations-for-smart-contracts-audit-and-analysis)
    - [Code Review and Analysis](#code-review-and-analysis)
    - [Testing](#testing)
-   - [Reporting](#reporting)
+   - [Report](#report)
    - [Remediation Check](#remediation-check)
    - [Issue Status](#issue-status)
    - [Vulnerabilities Severity Formula](#vulnerabilities-severity-formula)
