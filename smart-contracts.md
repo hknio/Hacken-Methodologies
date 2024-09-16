@@ -173,7 +173,7 @@ Automated tools are used to search for simple issues and provide more informatio
 During the testing stage of a smart contract audit, at least one auditor will focus on performing fuzz testing to ensure that even the most obscure edge cases are covered. Fuzz testing, or fuzzing, is especially valuable for complex projects where traditional testing methods may not uncover all potential vulnerabilities. 
 
 #### Why Fuzzing is Needed:
-Fuzzing is crucial for conducting thorough audits because it helps uncover unexpected behaviors and vulnerabilities that might not be detected through manual code review or standard test cases. Smart contracts, once deployed, are immutable, making it vital to identify and mitigate security flaws beforehand. By inputting random or semi-random data into the contract's functions, fuzz testing simulates a wide range of scenarios, including edge cases that might otherwise be overlooked. This helps ensure that the contract behaves as expected under all possible conditions, ultimately enhancing the overall security and reliability of the smart contract.
+Traditional testing methods often need help identifying edge cases and unforeseen scenarios; This is where fuzzing shines. By injecting random or invalid data into the contract, fuzzing explores uncharted territories and exposes vulnerabilities that might otherwise remain hidden. Think of it as a stress test, pushing the contract beyond its expected boundaries to discover potential points of failure. This helps ensure that the contract behaves as expected under all possible conditions, ultimately enhancing the overall security and reliability of the smart contract.
 
 #### Benefits of Fuzzing:
 
