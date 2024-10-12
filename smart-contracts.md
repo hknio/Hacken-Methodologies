@@ -91,7 +91,7 @@ Smart Contracts Audit and Analysis process consists of the following phases:
 
 <br />
 
-![Audit Phases](./images/sc-phases.png "Audit Phases")
+<img src="./images/sc-phases.png" alt="Audit Phases" width="1000"/>
 
 ## Preparations for Smart Contracts Audit and Analysis
 ### Why are preparations so important?
@@ -144,7 +144,7 @@ We strongly recommend following the official code style guides and formatting yo
 ## Code review and analysis
 Code review and analysis is performed by lead and assistant auditors across the whole process. Additional quality reviews are performed by an expert auditor to verify that all good security practices were performed during the workflow. All steps of this process:
 
-![Code review and analysis](./images/code-analysis.png "Code review and analysis")
+<img src="./images/code-analysis.png" alt="Code review and analysis" width="1000"/>
 
 ### Pre-audit
 The purpose of the pre-audit phase is to help customers understand how their project is being prepared for the audit and identify any areas that need improvement. Depending on the audit timeline, improvements can be made either before the actual audit or during the audit. 
@@ -181,9 +181,7 @@ Invariant testing ensures that certain conditions or properties (invariants) of 
 #### Why Fuzzing is Needed:
 Traditional testing methods often struggle to identify edge cases and unforeseen scenarios; this is where fuzzing shines. By injecting random or invalid data into the contract, fuzzing explores uncharted territories and exposes vulnerabilities that might otherwise remain hidden. Think of it as a stress test, pushing the contract beyond its expected boundaries to discover potential points of failure. This helps ensure that the contract behaves as expected under all possible conditions, ultimately enhancing the overall security and reliability of the smart contract.
 
-#### How Invariant Testing and Fuzzing Improve Audit Quality:
-
-![Code review and analysis](./images/fuzzing.png "Code review and analysis")
+<img src="./images/fuzzing.png" alt="Fuzzing" width="1000"/>
 
 #### Types of Fuzzing:
 
@@ -256,7 +254,9 @@ After all fixes are validated, a final report is provided to the customer.
 ## Issue Status
 During the auditing, an issue can have one of the following statuses:
 
-![Issue Status](./images/issue-status.png "Issue Status")
+<img src="./images/issue-status.png" alt="Issue Status" width="1000"/>
+
+<br />
 
 # Vulnerabilities severity formula
 ### [Hacken OÜ - Severity Formula Standart](https://github.com/hknio/severity-formula/blob/main/README.md)
