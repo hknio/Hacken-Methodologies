@@ -175,7 +175,7 @@ Automated tools are used to search for simple issues and provide more informatio
 ### Fuzz Testing
 During the testing stage of a smart contract audit, at least one auditor will focus on performing fuzz testing to ensure that even the most obscure edge cases are covered. Fuzz testing, or fuzzing, is especially valuable for complex projects where traditional testing methods may not uncover all potential vulnerabilities. 
 
-### Invariant Testing
+#### Invariant Testing
 Invariant testing ensures that certain conditions or properties (invariants) of a smart contract remain true throughout its execution. Invariants are critical properties that must always hold, regardless of transaction sequences or state changes. Testing these ensures the contract's integrity, correctness, and security.
 
 #### Why Fuzzing is Needed:
@@ -217,9 +217,7 @@ During the line-to-line review, auditors thoroughly read each line of the code a
 ### Checked Items
 Items differ for each language and platform that we audit smart contracts for. 
 
-EVM (Solidity, Vyper, Yul): [Checked Items (EVM)](https://docs.google.com/document/d/1dPTb24Fr1P2bBGw-CcDBbbmE0CR27GdWIzL6DutDNMY/edit#heading=h.c7gbsyms3j2w)
-
-Rust-based smart contract for Solala, Near, CosmWasm, and other platforms: [Checked Items (RUST)](https://docs.google.com/document/d/1uRSC_SaMHRqII4nX6m9yVONSp1YHUvOxTi-iaX9xWFo/)
+You can find our detailed checklist per language and platform here: [Hacken full checklist](./sc-checklist.md)
 
 ### Analysis of received data
 All auditors review their findings and audit artifacts, and share results internally. Auditors prepare materials for the report. An expert auditor reviews all materials prepared by the lead auditor and performs a quality review of the report. Most possible issues are already documented at this step.
