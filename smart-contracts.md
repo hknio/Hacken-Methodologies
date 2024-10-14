@@ -12,7 +12,7 @@ Release: Version 2.3
       - [How Does the Audit Help?](#how-does-the-audit-help)
 3. [Smart Contracts Audit and Analysis Phases](#part-2-smart-contracts-audit-and-analysis-phases)
    - [Preparations for Smart Contracts Audit and Analysis](#preparations-for-smart-contracts-audit-and-analysis)
-      - [Why are preparations so important?](why-are-preparations-so-important)
+      - [Why are preparations so important?](#why-are-preparations-so-important)
       - [Functional requirements](#functional-requirements)
       - [Technical description](#technical-description)
       - [Setup development environment of the project](#setup-development-environment-of-the-project)
