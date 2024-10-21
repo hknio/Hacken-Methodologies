@@ -99,9 +99,8 @@ Most developers need guidance on how to write secure and high-quality protocols.
 1. Preparations for the audit
 2. Code review and analysis
 3. Testing
-4. Reporting
-5. Bug fixing
-6. Remediations check
+4. Report
+5. Remediation check
 
 ## Preparations for Layer 1 Audit and Analysis
 ### Why are preparations so important?
