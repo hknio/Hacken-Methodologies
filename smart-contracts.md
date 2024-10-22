@@ -144,7 +144,7 @@ We strongly recommend following the official code style guides and formatting yo
 ## Code review and analysis
 Code review and analysis is performed by lead and assistant auditors across the whole process. Additional quality reviews are performed by an expert auditor to verify that all good security practices were performed during the workflow. All steps of this process:
 
-<img src="./images/code-analysis.png" alt="Code review and analysis" width="1000"/>
+<img src="./images/sc-code-analysis.png" alt="Code review and analysis" width="1000"/>
 
 ### Pre-audit
 The purpose of the pre-audit phase is to help customers understand how their project is being prepared for the audit and identify any areas that need improvement. Depending on the audit timeline, improvements can be made either before the actual audit or during the audit. 
@@ -242,14 +242,8 @@ After all code review, analysis, and tests, auditors prepare a report. Reports h
 All issues are reported to the customer in the preliminary report. If some points are unclear, we can provide more descriptions of issues or explain everything on a call.
 
 The customer is entitled to one complimentary remediation check if the following conditions are met:
-- **Timely Response:** Remedial actions must be implemented within the specified timeframe dictated by the Lead Auditor.
-- **Code Integrity:** The fundamental code structure should remain unchanged. Major architectural modifications may disqualify the customer from a free remediation check.
-- **Documentation:** All modifications to the code must be comprehensively documented by the customer, detailing what changes were made and why.
-- **Commit Specificity:** The submitted commits must exclusively address the vulnerabilities or issues that were identified in the "Findings" section of the preliminary report.
 
-Fixes must be submitted in a structured list, detailing the Finding ID and the corresponding commit hash.
-
-After all fixes are validated, a final report is provided to the customer.
+<img src="./images/remediation-check.png" alt="Vulnerabilities severity formula" width="1000"/>
 
 ## Issue Status
 During the auditing, an issue can have one of the following statuses:

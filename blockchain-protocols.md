@@ -79,19 +79,9 @@ A security audit is a systematic process that involves evaluating the security o
 ### How does the audit Help?
 Most developers need guidance on how to write secure and high-quality protocols. Our methodology will serve the needs of our customers, their technical teams, and their potential clients (community).
 
-**Our methodology will allow product owners to:**
-1. Make sure that the development corresponds to the specified functional requirements.
-2. Realize what steps need to be taken prior to the audit.
-3. Realize what steps need to be taken during the audit.
-4. Realize what steps need to be taken after the audit. 
+<img src="./images/l1-how-audit-help.png" alt="Code review and analysis" width="1000"/>
 
 <br />
-
-**The value of our methodology for developers:**
-1. It allows them to understand the audit process and its phases.
-2. Provides recommendations on how to ensure secure development. 
-3. Describes the most common mistakes.
-4. Provides best practices of how to develop safe code.
 
 # Part 2. Layer 1 Audit and Analysis Phases
 **Layer 1 Audit and Analysis process consist of the following phases:**
@@ -157,12 +147,7 @@ In conclusion, good documentation is a crucial aspect of a secure and well-funct
 ## Code review and analysis
 Code review and analysis are performed by the main auditor during the initial phase of an audit.  Additional reviews are also performed by all team members to verify that no critical or high severity issues are present in the code. The steps of this process are:
 
-1. Overall review
-2. Scan by automated tools
-3. Funds and data flow diagrams
-4. Line-to-line review
-5. Testing
-6. Analysis of received data
+<img src="./images/l1-code-analysis.png" alt="Code review and analysis" width="1000"/>
 
 ### Overall review
 At this step, the main auditor reads the code to understand its structure and purpose.  Functional and technical requirements, as well as other documents provided by clients are examined in detail. No serious findings can be detected at this step. The main outcome of this step is a high-level description of the code provided by auditors. Those deliverables are used internally during the next steps of the audit.
@@ -220,23 +205,15 @@ After all code review, analysis, and tests, auditors prepare a report. Reports h
 All issues are reported to the Customer in the preliminary report. If some points are unclear, we can provide more descriptions of issues or explain everything on a call.
 
 The customer is entitled to one complimentary remediation check if the following conditions are met:
-- **Timely Response:** Remedial actions must be implemented within the specified timeframe dictated by the Lead Auditor.
-- **Code Integrity:** The fundamental code structure should remain unchanged. Major architectural modifications may disqualify the customer from a free remediation check.
-- **Documentation:** All modifications to the code must be comprehensively documented by the customer, detailing what changes were made and why.
-- **Commit Specificity:** The submitted commits must exclusively address the vulnerabilities or issues that were identified in the "Findings" section of the preliminary report.
 
-Fixes must be submitted in a structured list, detailing the Finding ID and the corresponding commit hash.
-
-After all fixes are validated, a final report is provided to the customer.
+<img src="./images/remediation-check.png" alt="Vulnerabilities severity formula" width="1000"/>
 
 ## Issue status
 During the auditing, an issue can have one of the following statuses:
-- **Pending Fix:** An issue newly discovered by the auditing team, not fixed yet.
-- **Resolved:** An issue that has been resolved based on the auditor's recommendations. 
-- **Accepted:** This status is assigned to an issue that the customer has recognized but chosen not to fix, either because it is deemed an intentional feature or it has been consciously ignored. While the issue remains unaddressed, it has been formally acknowledged by the client. 
-- **Mitigated:** Changes that partially address an issue or implement a safeguard that reduces risk but does not fully eliminate the vulnerability.
 
-> Hacken assumes no liability for any security breaches or vulnerabilities ("rekt" cases) that may arise due to these unresolved or partially resolved issues.
+<img src="./images/issue-status.png" alt="Issue Status" width="1000"/>
+
+<br />
 
 # Vulnerabilities severity formula
-![Vulnerabilities severity formula](./images/l1-severity-formula.png "Vulnerabilities severity formula")
+<img src="./images/l1-severity-formula.png" alt="Vulnerabilities severity formula" width="1000"/>
