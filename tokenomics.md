@@ -48,6 +48,8 @@ The emergence of Web3 and tokenized economies has created a need for robust meth
 
 This methodology addresses this gap by providing a structured approach to tokenomics auditing, incorporating lessons learned from both successful and failed token projects. It builds upon academic research in token economics while maintaining practical applicability for real-world implementations.
 
+<br />
+
 # Part 2. Structural Analysis
 
 ## Objective
@@ -67,6 +69,8 @@ Auditor's guideline to evaluate the project's value creation and incentives, ret
 - **Agent Roles**: Identify key roles such as investors, validators, liquidity providers, and users. Assess each role's impact on the ecosystem and incentives for participation.
 - **Contributions and Dependencies**: Determine how each agent type contributes to the economy and if any dependencies could impact stability.
 - **Incentive Alignment**: Check that incentives promote behaviors aligned with long-term project goals, balancing stability and growth.
+
+<br />
 
 # Part 3. Allocation and Distribution
 
@@ -116,19 +120,44 @@ The analysis examines:
 3. Historical price impact of previous unlocks
 4. Circulating Supply
 
+<br />
+
 # Part 4. Code Compliance and Verification
+**Objective**: Ensure that the tokenomics model is accurately and securely implemented in the code, confirming that each designed feature functions as intended to support the project’s economic goals.
 
-## Background
-Code compliance and verification ensures the token's economic model implementation aligns with the intended design. This process validates not only the technical correctness of smart contracts but also their ability to enforce economic policies and maintain system stability. The verification process encompasses multiple layers of validation, from basic functionality to complex economic mechanisms.
+## Scope of Review
+The audit scope should be outlined to establish boundaries for code compliance assessment within the tokenomics model. Components under review, such as smart contracts, governance mechanisms, and dependency management, are defined, with exclusions noted for areas that do not directly impact tokenomics (e.g., external application interfaces).
 
-## Objective
-Ensure that the tokenomics model is accurately and securely implemented in the code, confirming that each designed feature functions as intended to support the project's economic goals.
+## Compliance Standards and Benchmarks
+- **Standards Reference** 
+A standard reference is provided to relevant industry standards or frameworks, such as OWASP for security or specific blockchain standards (e.g., ERC-20, ERC-721, ERC-1155). These references ensure that the code aligns with industry-recognized practices in security and functionality.
+
+- **Benchmark Criteria**
+Baseline criteria, including minimum performance levels or security thresholds, are specified to ensure consistent evaluation across all areas. These benchmarks support the assessment by defining fundamental requirements for secure and stable tokenomics functionality.
+
+## Required Documentation
+Documentation supports the audit by providing auditors with information necessary to verify each part of the tokenomics implementation. Access to detailed documentation allows auditors to assess whether the code meets the project’s economic requirements and intended design.
+
+1. **Developer Documentation**  
+   Developer documentation explains each function’s purpose, parameters, and dependencies within the tokenomics model. This helps auditors confirm that the code aligns with the intended design.
+
+2. **Functional Requirements**  
+   Functional requirements outline the expected behaviors and outputs for each component in the tokenomics model. These requirements help auditors confirm that the implemented functions meet the project’s defined objectives, such as handling transaction fees, staking mechanisms, and governance processes.
+
+3. **Flow Diagrams and Netspecs**  
+   Flow diagrams and network specifications (netspecs) illustrate how data and operations move through the tokenomics system. These visual aids support auditors in understanding complex interactions within the code, allowing them to trace processes, such as minting, burning, and reward distribution.
+
+With this documentation, auditors can cross-reference the code with the tokenomics model to check functionality, performance, and compliance with the intended design.
+
+## Key Evaluation Points
 
 - **Token Utility Validation**: Confirm that core utilities like transaction fees, governance rights, and staking mechanisms are accurately implemented and functional in the code.
 - **Reward and Penalty Mechanisms**: Verify that rewards (e.g., staking returns) and penalties (e.g., unstaking fees) align with the specified tokenomics design.
 - **Burning Mechanisms**: Ensure that any token burn functions operate as intended and trigger under the specified conditions.
 - **Supply Control Functions**: Check for correct implementation of functions that adjust supply, such as minting, vesting, or vesting release.
 - **Security and Access Controls**: Assess the security of key functions and confirm that only authorized entities can execute sensitive actions, such as updates to economic parameters.
+
+<br />
 
 # Part 5. Scoring & Rating
 
@@ -314,6 +343,8 @@ Total Score = SA Score + AD Score + CCV Score
 
 ### Assigning the Rating
 Based on the Total Score of 3.85, the project would receive an A rating (3.5 - 3.9), indicating a solid structure with some areas for moderate improvement.
+
+<br />
 
 # Glossary
 
