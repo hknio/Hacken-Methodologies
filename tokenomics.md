@@ -120,6 +120,38 @@ The analysis examines:
 3. Historical price impact of previous unlocks
 4. Circulating Supply
 
+## Monitoring
+Monitoring token distribution through Performance Metrics and Risk Assessment Parameters allows projects to maintain and protect their token economy. While this methodology presents these monitoring guidelines, their implementation remains optional and can be executed through [Hacken Extractor](https://extractor.live).
+
+
+### Performance Metrics
+
+The following metrics can be tracked and reported:
+
+| Metric | Target Range | Monitoring Frequency |
+|--------|--------------|---------------------|
+| Holder Concentration | Top 10 holders < 50% | Daily |
+| Monthly Unlock Rate | < 5% of total supply | Monthly |
+| Liquidity Ratio | > 10% of market cap | Daily |
+| Circulating Supply | 10-20% at TGE | Daily |
+| Market Cap/TVL | 1-3x ratio | Weekly |
+| Volume/MCap Ratio | > 0.1 | Daily |
+
+### Risk Assessment Parameters
+
+The following risk metrics can be evaluated:
+
+| Risk Category | Assessment Parameters | Update Frequency |
+|--------------|----------------------|------------------|
+| Concentration | Whale formation probability | Weekly |
+| Market Stability | Price impact per $100k | Daily |
+| Vesting Impact | Projected unlock pressure | Monthly |
+| Liquidity Risk | LP token concentration | Daily |
+| Supply Risk | Inflation rate impact | Monthly |
+| Distribution Risk | Holder diversity index | Weekly |
+
+This framework provides a comprehensive assessment of token distribution while maintaining focus on practical implementation and risk management.
+
 <br />
 
 # Part 4. Code Compliance and Verification
@@ -337,8 +369,8 @@ Let's say an auditor reviews a token project and assigns the following points:
    - Calculation: CCV Score = (15 / 20) x 5 x 0.25 = 0.938
 
 ### Total Score Calculation
-Total Score = SA Score + AD Score + CCV Score
-= 
+Total Score = SA Score + AD Score + CCV Score 
+
 1.6 + 1.313 + 0.938 = 3.85
 
 ### Assigning the Rating
