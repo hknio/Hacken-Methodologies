@@ -97,7 +97,7 @@ One of our key strengths lies in conducting a Readiness Assessment as a crucial 
 At Hacken, we don't just stop at providing recommendations. We go the extra mile to ensure that your organization truly implements our guidance effectively. Through a meticulous process, we verify the implementation of our recommendations and upon completion compile a comprehensive package of certification documents, showcasing your commitment to industry-leading security practices. 
 
 ## Our CCSS Process
-![Our CCSS Process](./images/ccss-process.png "Our CCSS Process")
+![Our CCSS Process](../images/ccss-process.png "Our CCSS Process")
 
 ---
 

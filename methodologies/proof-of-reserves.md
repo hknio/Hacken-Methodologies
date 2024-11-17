@@ -155,7 +155,7 @@ By conducting meticulous queries, comparisons, and calculations, we provide you 
 
 **One-time Proof of Reserves audit can be completed in 2-3 weeks:**
 
-![Our Proof of Reserves Process](./images/por-process.png "Our Proof of Reserves Process")
+![Our Proof of Reserves Process](../images/por-process.png "Our Proof of Reserves Process")
 
 # Elevating Proof of Reserves: Real-time Proof of Reserves
 

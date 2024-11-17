@@ -91,7 +91,7 @@ Smart Contracts Audit and Analysis process consists of the following phases:
 
 <br />
 
-<img src="./images/sc-phases.png" alt="Audit Phases" width="1000"/>
+<img src="../images/sc-phases.png" alt="Audit Phases" width="1000"/>
 
 ## Preparations for Smart Contracts Audit and Analysis
 ### Why are preparations so important?
@@ -144,7 +144,7 @@ We strongly recommend following the official code style guides and formatting yo
 ## Code review and analysis
 Code review and analysis is performed by lead and assistant auditors across the whole process. Additional quality reviews are performed by an expert auditor to verify that all good security practices were performed during the workflow. All steps of this process:
 
-<img src="./images/sc-code-analysis.png" alt="Code review and analysis" width="1000"/>
+<img src="../images/sc-code-analysis.png" alt="Code review and analysis" width="1000"/>
 
 ### Pre-audit
 The purpose of the pre-audit phase is to help customers understand how their project is being prepared for the audit and identify any areas that need improvement. Depending on the audit timeline, improvements can be made either before the actual audit or during the audit. 
@@ -181,7 +181,7 @@ Invariant testing ensures that certain conditions or properties (invariants) of 
 #### Why Fuzzing is Needed:
 Traditional testing methods often struggle to identify edge cases and unforeseen scenarios; this is where fuzzing shines. By injecting random or invalid data into the contract, fuzzing explores uncharted territories and exposes vulnerabilities that might otherwise remain hidden. Think of it as a stress test, pushing the contract beyond its expected boundaries to discover potential points of failure. This helps ensure that the contract behaves as expected under all possible conditions, ultimately enhancing the overall security and reliability of the smart contract.
 
-<img src="./images/fuzzing.png" alt="Fuzzing" width="1000"/>
+<img src="../images/fuzzing.png" alt="Fuzzing" width="1000"/>
 
 #### Types of Fuzzing:
 
@@ -215,7 +215,7 @@ During the line-to-line review, auditors thoroughly read each line of the code a
 ### Checked Items
 Items differ for each language and platform that we audit smart contracts for. 
 
-You can find our detailed checklist per language and platform here: [Hacken full checklist](./sc-checklist.md)
+You can find our detailed checklist per language and platform here: [Hacken full checklist](../general/sc-checklist.md)
 
 ### Analysis of received data
 All auditors review their findings and audit artifacts, and share results internally. Auditors prepare materials for the report. An expert auditor reviews all materials prepared by the lead auditor and performs a quality review of the report. Most possible issues are already documented at this step.
@@ -243,12 +243,12 @@ All issues are reported to the customer in the preliminary report. If some point
 
 The customer is entitled to one complimentary remediation check if the following conditions are met:
 
-<img src="./images/remediation-check.png" alt="Vulnerabilities severity formula" width="1000"/>
+<img src="../images/remediation-check.png" alt="Vulnerabilities severity formula" width="1000"/>
 
 ## Issue Status
 During the auditing, an issue can have one of the following statuses:
 
-<img src="./images/issue-status.png" alt="Issue Status" width="1000"/>
+<img src="../images/issue-status.png" alt="Issue Status" width="1000"/>
 
 <br />
 

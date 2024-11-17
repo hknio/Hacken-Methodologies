@@ -79,7 +79,7 @@ A security audit is a systematic process that involves evaluating the security o
 ### How does the audit Help?
 Most developers need guidance on how to write secure and high-quality protocols. Our methodology will serve the needs of our customers, their technical teams, and their potential clients (community).
 
-<img src="./images/l1-how-audit-help.png" alt="Code review and analysis" width="1000"/>
+<img src="../images/l1-how-audit-help.png" alt="Code review and analysis" width="1000"/>
 
 <br />
 
@@ -147,7 +147,7 @@ In conclusion, good documentation is a crucial aspect of a secure and well-funct
 ## Code review and analysis
 Code review and analysis are performed by the main auditor during the initial phase of an audit.  Additional reviews are also performed by all team members to verify that no critical or high severity issues are present in the code. The steps of this process are:
 
-<img src="./images/l1-code-analysis.png" alt="Code review and analysis" width="1000"/>
+<img src="../images/l1-code-analysis.png" alt="Code review and analysis" width="1000"/>
 
 ### Overall review
 At this step, the main auditor reads the code to understand its structure and purpose.  Functional and technical requirements, as well as other documents provided by clients are examined in detail. No serious findings can be detected at this step. The main outcome of this step is a high-level description of the code provided by auditors. Those deliverables are used internally during the next steps of the audit.
@@ -206,14 +206,14 @@ All issues are reported to the Customer in the preliminary report. If some point
 
 The customer is entitled to one complimentary remediation check if the following conditions are met:
 
-<img src="./images/remediation-check.png" alt="Vulnerabilities severity formula" width="1000"/>
+<img src="../images/remediation-check.png" alt="Vulnerabilities severity formula" width="1000"/>
 
 ## Issue status
 During the auditing, an issue can have one of the following statuses:
 
-<img src="./images/issue-status.png" alt="Issue Status" width="1000"/>
+<img src="../images/issue-status.png" alt="Issue Status" width="1000"/>
 
 <br />
 
 # Vulnerabilities severity formula
-<img src="./images/l1-severity-formula.png" alt="Vulnerabilities severity formula" width="1000"/>
+<img src="../images/l1-severity-formula.png" alt="Vulnerabilities severity formula" width="1000"/>
